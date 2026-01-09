@@ -1,11 +1,9 @@
-# Use official Python image
-FROM python:3.13.11
+FROM python:3.9-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy all files to container
-COPY . . 
+# Copy both the app and the test file
+COPY student.py test_student.py ./
 
-# Command to run Python file
-CMD ["python", "app.py"]
+# Run the app by default
+CMD ["python", "-u", "student.py"]
