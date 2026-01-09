@@ -1,5 +1,5 @@
 import unittest
-from s_enq.student import calculate_grade
+from student import calculate_grade
 
 class TestStudentGrading(unittest.TestCase):
 
